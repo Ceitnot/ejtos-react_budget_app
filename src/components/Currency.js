@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+import '../App.css';
+
 
 const Currency = () => {
   const { currency, dispatch } = useContext(AppContext);
@@ -16,6 +18,21 @@ const Currency = () => {
       type: 'CHG_CURRENCY',
       payload: nextCurrency,
     });
+
+    // const selectedOption = this.options[this.selectedIndex];
+
+    // // Remove round braces from the previously selected option
+    // const prevSelectedOption = this.querySelector('option[selected="selected"]');
+    // if (prevSelectedOption) {
+    //   prevSelectedOption.innerHTML = prevSelectedOption.innerHTML.replace(/\(|\)/g, '');
+    // }
+
+    // // Wrap the selected option's content in round brackets
+    // selectedOption.innerHTML = `(${selectedOption.innerHTML})`;
+
+    // // Set the selected result font color to white
+    // selectedResult.style.color = "white";
+
   };
 
   const signToCurrency = (cur) => {
@@ -29,7 +46,6 @@ const Currency = () => {
   return (
     <div className='alert alert-secondary'>
       <span style={{ marginRight: '0.5rem' }}>Currency:</span>
-      (
       <select className="custom-select" id="inputGroupSelect04" onChange={setCurrency}>
                 <option defaultValue value={currency}>{currency} {signToCurrency(currency)}</option>
                 <option value="$" name="dollar">$ Dollar</option>
@@ -37,7 +53,6 @@ const Currency = () => {
                 <option value="€" name="euro">€ Euro</option>
                 <option value="₹" name="ruppee">₹ Ruppee</option>
         </select>
-      )
     </div>
   );
 };

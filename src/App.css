@@ -36,7 +36,22 @@
     transform: rotate(360deg);
   }
 }
-#inputGroupSelect04
-{
-    background-color: #99ffb2;
-}
+/* Custom styles for the select element */
+.custom-select {
+    background-color: rgb(87, 245, 134); /* Set the background color to green */
+    color: black; /* Set the text color to white */
+    border-radius: 5px; /* Set round corners with the desired radius */
+    padding: 5px; /* Add padding to the select box */
+    border-color: rgb(87, 245, 134);
+  }
+  
+  /* Style for the hovered option */
+  .custom-select option:hover {
+    background-color: white; /* Hovered option becomes white */
+  }
+  
+  /* Style for the selected option */
+  .custom-select option:checked {
+    background-color: rgb(87, 245, 134);
+    color: white; /* Set text color to white for the selected option */
+  }
