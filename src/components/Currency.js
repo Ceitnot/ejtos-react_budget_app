@@ -46,7 +46,7 @@ const Currency = () => {
   return (
     <div className='alert alert-secondary'>
       <span style={{ marginRight: '0.5rem' }}>Currency:</span>
-      <select className="custom-select" id="inputGroupSelect04" onChange={setCurrency}>
+      <select className="custom-select" id="currency-select" onChange={setCurrency}>
                 <option defaultValue value={currency}>{currency} {signToCurrency(currency)}</option>
                 <option value="$" name="dollar">$ Dollar</option>
                 <option value="£" name="pound">£ Pound</option>
