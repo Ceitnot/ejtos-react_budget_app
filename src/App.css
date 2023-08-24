@@ -38,20 +38,28 @@
 }
 /* Custom styles for the select element */
 #currency-select {
-    background-color: rgb(87, 245, 134); /* Set the background color to green */
-    color: black; /* Set the text color to white */
+    background-color: rgb(135, 229, 163); /* Set the background color to green */
     border-radius: 5px; /* Set round corners with the desired radius */
     padding: 5px; /* Add padding to the select box */
-    border-color: rgb(87, 245, 134);
+    border-color: rgb(135, 229, 163);
+    color: white; /* Set the color of the caption to white */
   }
   
-  /* Style for the hovered option */
+  #currency-select option {
+    color: black;
+  }
+  
+  /* Set the background color of the options to white and the font color to black when the user hovers over them */
   #currency-select option:hover {
-    background-color: white; /* Hovered option becomes white */
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
   }
   
-  /* Style for the selected option */
-  #currency-select option:checked {
-    background-color: rgb(87, 245, 134);
-    color: white; /* Set text color to white for the selected option */
+  /* Add a pseudo-element to the last option element to display the text of the selected option in round brackets */
+  #currency-select option:last-child::after {
+    content: "( " attr(selected) " )"; /* Set the content of the pseudo-element to the text of the selected option, enclosed in round brackets */
+    color: black; /* Set the color of the pseudo-element to black */
+    font-weight: bold; /* Make the font bold */
+    padding-left: 5px; /* Add padding to the left of the pseudo-element */
+    padding-right: 5px; /* Add padding to the right of the pseudo-element */
   }
